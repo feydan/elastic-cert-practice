@@ -1,0 +1,7 @@
+transport.tcp.port: 9301
+http.port: 9201
+network.host: 0.0.0.0
+cluster.name: "dan_cluster"
+discovery.zen.minimum_master_nodes: 2
+discovery.zen.ping.unicast.hosts:
+    - node1:9302

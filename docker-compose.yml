@@ -1,0 +1,16 @@
+version: '3'
+services:
+  node1:
+    build: ./node1
+    ports:
+      - "9200:9200"
+  node2:
+    build: ./node2
+    ports:
+      - "9201:9201"
+  kibana:
+    build: ./kibana
+    depends_on: 
+      - "node1"
+    ports:
+      - "5601:5601"
